@@ -1,0 +1,224 @@
+/* Style général */
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barre de navigation */
+nav {
+    background-color: #007BFF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #007BFF;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Contenu principal */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Icônes dans la section "about" */
+.icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.icons i {
+    font-size: 2.5em;
+    color: #007BFF;
+    margin: 10px;
+}
+
+/* Barre de progression des dons */
+#donate .progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+#donate .progress-fill {
+    height: 20px;
+    background-color: #28a745;
+    width: 0%;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+#donate button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#donate button:hover {
+    background-color: #0056b3;
+}
+
+/* Section Parallaxe */
+#photos {
+    position: relative;
+    padding: 0;
+    height: 300px; /* Réduction de la hauteur */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-image: url('fond-voyage.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Limite la taille de l'image */
+.tabouret-photo {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Limite de la hauteur pour l'image */
+}
+
+/* Témoignages */
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Livre d'or */
+#guestbook-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#guestbook-form input, #guestbook-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#guestbook-form button {
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#guestbook-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header {
+        padding: 30px 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #photos {
+        height: 200px; /* Hauteur plus petite pour les mobiles */
+    }
+    
+    .tabouret-photo {
+        max-height: 200px; /* Ajustement de la hauteur de l'image pour mobile */
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .icons i {
+        font-size: 2em;
+    }
+}
