@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save The Stool</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Icônes -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Pourquoi donner</a></li>
+                <li><a href="#donate">Faites un don</a></li>
+                <li><a href="#photos">Aventures</a></li>
+                <li><a href="#testimonials">Témoignages</a></li>
+                <li><a href="#guestbook">Livre d'or</a></li>
+            </ul>
+        </nav>
+        <h1>Save The Stool</h1>
+        <p>Faites voyager le tabouret !</p>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Pourquoi un don pour le tabouret ?</h2>
+            <p>Notre tabouret est un aventurier. Il parcourt le monde avec nous. Mais ces voyages ont un coût ! Transport, entretien, même un tabouret a besoin de votre aide.</p>
+            <div class="icons">
+                <i class="fas fa-plane"></i> <i class="fas fa-hotel"></i> <i class="fas fa-utensils"></i>
+            </div>
+        </section>
+
+        <section id="donate">
+            <h2>Faites un don</h2>
+            <p>Montant collecté : <span id="amount">$0</span> / $10,000</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <button onclick="increaseDonation()">Donner $1000</button>
+        </section>
+
+        <section id="photos" class="parallax">
+            <h2>Les aventures du tabouret</h2>
+            <img src="tabouret-en-voyage.jpg" alt="Tabouret en voyage" class="tabouret-photo">
+        </section>
+
+        <section id="testimonials">
+            <h2>Témoignages</h2>
+            <div class="testimonial">
+                <p>"Grâce à vos dons, le tabouret a vu la Tour Eiffel pour la première fois. Un moment émouvant !"</p>
+                <span>- Un ami du tabouret</span>
+            </div>
+            <div class="testimonial">
+                <p>"Sans vous, notre tabouret n'aurait jamais goûté à la cuisine italienne à Rome. Mille mercis !"</p>
+                <span>- Une autre fan du tabouret</span>
+            </div>
+            <div class="testimonial">
+                <p>"Grâce à son propriétaire et son accompagnatrice pour la Californie, le tabouret a assisté à son premier cours de théâtre !"</p>
+                <span>- Anaïs C.</span>
+            </div>
+        </section>
+
+        <section id="guestbook">
+            <h2>Livre d'or du tabouret</h2>
+            <form id="guestbook-form" onsubmit="submitGuestbook(event)">
+                <input type="text" id="name" placeholder="Votre nom" required>
+                <textarea id="message" placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+            <div id="guestbook-messages"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Save The Stool - Merci pour votre soutien !</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
