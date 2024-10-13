@@ -8,6 +8,11 @@ function increaseDonation() {
     const progressFill = document.getElementById('progress-fill');
     const progressPercentage = (donationAmount / 10000) * 100;
     progressFill.style.width = `${progressPercentage}%`;
+
+    // Redirection si l'objectif est atteint
+    if (donationAmount >= 10000) {
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; // Lien vers le rickroll
+    }
 }
 
 function submitGuestbook(event) {
